@@ -40,6 +40,6 @@ jobs:
       
       
       - name: Deploy to Surge
-        run: surge ./build mylec.surge.su --token ${{secrets.H2H_123}}
+        run: surge ./ http://venomous15056.surge.sh --token ${{secrets.H2H_123}}
 
     
