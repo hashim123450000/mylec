@@ -4,7 +4,7 @@ name: REACT
 
 #Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull requestevents but only for the main branch
+  # Triggers the workflow on push or pull requestevents bt only for the main branch
   push:
     branches: [ main ]
   pull_request:
