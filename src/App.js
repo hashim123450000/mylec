@@ -1,13 +1,20 @@
-import React from "react"
-import './App.css';
-import Worker from './components/work';
+import React, { useState } from "react"
+import './ap.css';
 
-function App( props) {
+
+function App() {
+  let [value,setValue]=useState(false)
+  let [age,setAge]=useState(23)
   return (
-    <div >
-      <h1>{props.name}</h1>
-      <h1>{props.age}</h1>
-      <Worker/>
+    <div className={'room '+(value?"lit":"dark")} >
+      this room is    {value?"lit":"dark"}
+     <h1>{age}</h1>
+     <button onClick={()=>{
+       setValue(!value)
+     }}>ROme</button>
+     <button onClick={()=>{
+       setAge(++age)
+     }}>increse</button>
     
     </div>
   );
