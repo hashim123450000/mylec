@@ -4,12 +4,12 @@ import Parent from "./components/parent"
 import Valuecontext from"./components/valuecontex"
 
 function App() {
-  let [value,setValue]=useState(100)
+ 
   
-  let number=81
+  let value=useState(48)
   
   return (
-    <Valuecontext.Provider value={number}>
+    <Valuecontext.Provider value={value}>
     <div >
     <Parent  num={value} />
     
