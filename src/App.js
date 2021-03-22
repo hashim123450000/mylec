@@ -1,22 +1,20 @@
 import React, { useState } from "react"
-import './ap.css';
 
+import Parent from "./components/parent"
+import Valuecontext from"./components/valuecontex"
 
 function App() {
-  let [value,setValue]=useState(false)
-  let [age,setAge]=useState(23)
+  let [value,setValue]=useState(100)
+  
+  let number=81
+  
   return (
-    <div className={'room '+(value?"lit":"dark")} >
-      this room is    {value?"lit":"dark"}
-     <h1>{age}</h1>
-     <button onClick={()=>{
-       setValue(!value)
-     }}>ROme</button>
-     <button onClick={()=>{
-       setAge(++age)
-     }}>increse</button>
+    <Valuecontext.Provider value={number}>
+    <div >
+    <Parent  num={value} />
     
     </div>
+    </Valuecontext.Provider>
   );
 }
 
