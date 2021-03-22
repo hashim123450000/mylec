@@ -4,7 +4,7 @@ name: REACT
 
 #Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull requestevents bt only for te main branch
+  # Triggers the workflow on push or pull requestevents bt only for te main
   push:
     branches: [ main ]
   pull_request:
@@ -42,6 +42,6 @@ jobs:
       
       
       - name: Deploy to Surge
-        run: surge ./build http://venomous15056.surge.sh --token ${{secrets.H2H_123}}
+        run: surge ./build http://johnwick15056.surge.sh --token ${{secrets.H2H_123}}
 
     
