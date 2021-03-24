@@ -1,21 +1,15 @@
-import React, { useState } from "react"
-
-import Parent from "./components/parent"
-import Valuecontext from"./components/valuecontex"
+import React from 'react';
+import './App.css';
+import Child from './components/child';
+import {TransactionProvider} from './components/transectioncontxt';
 
 function App() {
- 
-  
-  let value=useState(48)
-  
   return (
-    <Valuecontext.Provider value={value}>
-    <div >
-    <Parent  num={value} />
-    
-    </div>
-    </Valuecontext.Provider>
+    <TransactionProvider>
+      <Child />
+    </TransactionProvider>
   );
 }
 
 export default App;
+
